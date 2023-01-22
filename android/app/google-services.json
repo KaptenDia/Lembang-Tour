@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "60303894906",
+    "project_id": "airplane-d9bc3",
+    "storage_bucket": "airplane-d9bc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60303894906:android:0645d177377a7078e10ec3",
+        "android_client_info": {
+          "package_name": "com.emud.lembangtour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60303894906-isfdmlt3ajnbuqe828sd5q4qfo1sbpkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIeG7NLvKoum3exLpFHxYP9O1oK8oC-eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60303894906-isfdmlt3ajnbuqe828sd5q4qfo1sbpkj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60303894906:android:ecf31ea5d070a43fe10ec3",
+        "android_client_info": {
+          "package_name": "com.mud.airplane_bwa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60303894906-isfdmlt3ajnbuqe828sd5q4qfo1sbpkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIeG7NLvKoum3exLpFHxYP9O1oK8oC-eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60303894906-isfdmlt3ajnbuqe828sd5q4qfo1sbpkj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
