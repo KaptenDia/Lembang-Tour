@@ -92,11 +92,26 @@ class _HomePageState extends State<HomePage> {
         ),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            // ignore: prefer_const_literals_to_create_immutables
-            children: destinations.map((DestinationModel destination) {
-              return DestinationCard(destination);
-            }).toList(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: defaultMargin),
+                child: Text(
+                  'Popular',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: semiBold,
+                  ),
+                ),
+              ),
+              Row(
+                // ignore: prefer_const_literals_to_create_immutables
+                children: destinations.map((DestinationModel destination) {
+                  return DestinationCard(destination);
+                }).toList(),
+              ),
+            ],
           ),
         ),
       );
@@ -114,7 +129,7 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Popular',
+              'New Favorite',
               style: blackTextStyle.copyWith(
                 fontSize: 18,
                 fontWeight: semiBold,
