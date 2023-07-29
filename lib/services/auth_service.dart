@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../models/user_model.dart';
 
 class AuthService {
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   Future<UserModel> signUp({
     required String email,
@@ -26,7 +26,7 @@ class AuthService {
       await UserService().setUser(user);
       return user;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -43,7 +43,7 @@ class AuthService {
 
       return user;
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 
@@ -51,7 +51,7 @@ class AuthService {
     try {
       await _auth.signOut();
     } catch (e) {
-      throw e;
+      rethrow;
     }
   }
 }

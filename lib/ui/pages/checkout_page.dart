@@ -269,7 +269,7 @@ class CheckoutPage extends StatelessWidget {
             );
           }
 
-          return SizedBox();
+          return const SizedBox();
         },
       );
     }

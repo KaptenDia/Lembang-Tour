@@ -1,7 +1,7 @@
 import 'package:airplane_bwa/models/user_model.dart';
 import 'package:airplane_bwa/services/auth_service.dart';
-import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../services/user_service.dart';
 

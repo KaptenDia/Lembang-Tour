@@ -1,8 +1,5 @@
 import 'package:airplane_bwa/models/user_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../cubit/auth_cubit.dart';
 import '../../../shared/theme.dart';
 
 class Header extends StatelessWidget {

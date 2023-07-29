@@ -1,8 +1,6 @@
 import 'package:airplane_bwa/cubit/auth_cubit.dart';
 import 'package:airplane_bwa/cubit/destination_cubit.dart';
 import 'package:airplane_bwa/cubit/seat_cubit.dart';
-import 'package:airplane_bwa/shared/theme.dart';
-import 'package:airplane_bwa/shared/theme_service.dart';
 import 'package:airplane_bwa/ui/pages/bonus_page.dart';
 import 'package:airplane_bwa/ui/pages/get_started_page.dart';
 import 'package:airplane_bwa/ui/pages/main_page.dart';
@@ -12,7 +10,6 @@ import 'package:airplane_bwa/ui/pages/splash_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 
 import 'cubit/page_cubit.dart';
 

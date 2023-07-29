@@ -1,9 +1,7 @@
 import 'package:airplane_bwa/cubit/destination_cubit.dart';
-import 'package:airplane_bwa/models/user_model.dart';
 import 'package:airplane_bwa/shared/theme.dart';
 import 'package:airplane_bwa/ui/pages/widgets/destination_card.dart';
 import 'package:airplane_bwa/ui/pages/widgets/destination_tile.dart';
-import 'package:airplane_bwa/ui/pages/widgets/header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,6 +22,7 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     Widget header() {
       return BlocBuilder<AuthCubit, AuthState>(
@@ -79,7 +78,7 @@ class _HomePageState extends State<HomePage> {
               ),
             );
           } else {
-            return SizedBox();
+            return const SizedBox();
           }
         },
       );
@@ -107,9 +106,13 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 // ignore: prefer_const_literals_to_create_immutables
-                children: destinations.map((DestinationModel destination) {
-                  return DestinationCard(destination);
-                }).toList(),
+                children: destinations
+                    .map((DestinationModel destination) {
+                      return DestinationCard(destination);
+                    })
+                    .toList()
+                    .where((rate) => rate.destination.rating! >= 4.7)
+                    .toList(),
               ),
             ],
           ),
@@ -129,16 +132,20 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'New Favorite',
+              'Most Visited',
               style: blackTextStyle.copyWith(
                 fontSize: 18,
                 fontWeight: semiBold,
               ),
             ),
             Column(
-              children: destinations.map((DestinationModel destination) {
-                return DestinationTile(destination);
-              }).toList(),
+              children: destinations
+                  .map((DestinationModel destination) {
+                    return DestinationTile(destination);
+                  })
+                  .toList()
+                  .where((name) => name.destination.rating! < 4.7)
+                  .toList(),
             ),
           ],
         ),
@@ -166,7 +173,7 @@ class _HomePageState extends State<HomePage> {
             ],
           );
         }
-        return Center(
+        return const Center(
           child: CircularProgressIndicator(),
         );
       },

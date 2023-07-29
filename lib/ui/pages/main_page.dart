@@ -1,6 +1,5 @@
 import 'package:airplane_bwa/cubit/page_cubit.dart';
 import 'package:airplane_bwa/shared/theme.dart';
-import 'package:airplane_bwa/shared/theme_service.dart';
 import 'package:airplane_bwa/ui/pages/home_page.dart';
 import 'package:airplane_bwa/ui/pages/setting_page.dart';
 import 'package:airplane_bwa/ui/pages/transations_page.dart';
@@ -8,7 +7,6 @@ import 'package:airplane_bwa/ui/pages/wallet_page.dart';
 import 'package:airplane_bwa/ui/pages/widgets/custom_bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -18,15 +16,15 @@ class MainPage extends StatelessWidget {
     Widget buildContent(int currentIndex) {
       switch (currentIndex) {
         case 0:
-          return HomePage();
+          return const HomePage();
         case 1:
-          return TransactionPage();
+          return const TransactionPage();
         case 2:
-          return WalletPage();
+          return const WalletPage();
         case 3:
-          return SettingPage();
+          return const SettingPage();
         default:
-          return HomePage();
+          return const HomePage();
       }
     }
 
@@ -47,7 +45,7 @@ class MainPage extends StatelessWidget {
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
+            children: const [
               CustomBottomNavigationItem(
                 index: 0,
                 imageUrl: 'assets/icon_home.png',

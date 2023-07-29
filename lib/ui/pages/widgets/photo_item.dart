@@ -7,21 +7,24 @@ class PhotoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 70,
-      height: 70,
-      margin: const EdgeInsets.only(
-        right: 16,
-      ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(
-          18,
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        width: 70,
+        height: 70,
+        margin: const EdgeInsets.only(
+          right: 16,
         ),
-        image: DecorationImage(
-          image: NetworkImage(
-            imageUrl,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(
+            18,
           ),
-          fit: BoxFit.cover,
+          image: DecorationImage(
+            image: NetworkImage(
+              imageUrl,
+            ),
+            fit: BoxFit.cover,
+          ),
         ),
       ),
     );

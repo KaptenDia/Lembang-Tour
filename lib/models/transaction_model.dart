@@ -11,7 +11,7 @@ class TransactionModel extends Equatable {
   final int price;
   final int grandTotal;
 
-  TransactionModel({
+  const TransactionModel({
     required this.destination,
     this.amountOfTraveler = 0,
     this.selectedSeats = '',

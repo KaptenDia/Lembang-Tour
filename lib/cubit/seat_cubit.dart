@@ -1,5 +1,4 @@
-import 'package:bloc/bloc.dart';
-import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SeatCubit extends Cubit<List<String>> {
   SeatCubit() : super([]);
@@ -10,6 +9,7 @@ class SeatCubit extends Cubit<List<String>> {
     } else {
       state.remove(id);
     }
+    // ignore: avoid_print
     print(state);
     emit(List.from(state));
   }

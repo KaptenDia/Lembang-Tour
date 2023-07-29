@@ -166,7 +166,7 @@ class DetailPage extends StatelessWidget {
                       height: 2,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   // NOTE: ADDRESS
